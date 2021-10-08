@@ -17,8 +17,8 @@ static string card_array[4][14] = {{"[JKR]",
                                     "[10\u2666]",
                                     "[ J\u2666]",
                                     "[ Q\u2666]",
-                                    "[ K\u2666]"
-                                  },{"[JKR]",
+                                    "[ K\u2666]"},
+                                   {"[JKR]",
                                     "[ A\u2663]",
                                     "[ 2\u2663]",
                                     "[ 3\u2663]",
@@ -31,8 +31,8 @@ static string card_array[4][14] = {{"[JKR]",
                                     "[10\u2663]",
                                     "[ J\u2663]",
                                     "[ Q\u2663]",
-                                    "[ K\u2663]"
-                                  },{"[JKR]",
+                                    "[ K\u2663]"},
+                                   {"[JKR]",
                                     "[ A\u2665]",
                                     "[ 2\u2665]",
                                     "[ 3\u2665]",
@@ -45,8 +45,8 @@ static string card_array[4][14] = {{"[JKR]",
                                     "[10\u2665]",
                                     "[ J\u2665]",
                                     "[ Q\u2665]",
-                                    "[ K\u2665]"
-                                  },{"[JKR]",
+                                    "[ K\u2665]"},
+                                   {"[JKR]",
                                     "[ A\u2660]",
                                     "[ 2\u2660]",
                                     "[ 3\u2660]",
@@ -61,27 +61,26 @@ static string card_array[4][14] = {{"[JKR]",
                                     "[ Q\u2660]",
                                     "[ K\u2660]"}};
 
-
 // Default constructor
-Card:: Card()
+Card::Card()
 {
 }
 
 // Parameterized constructor
-Card:: Card(int value, int suit)
+Card::Card(int value, int suit)
 {
-  set_value(value, suit);  // Set the value and suit of the card
+    set_value(value, suit); // Set the value and suit of the card
 }
-  
+
 // Destructor
-Card:: ~Card()
+Card::~Card()
 {
 }
 
 //
 // Card::operator==
 //
-bool Card::operator== (const Card& rhs)
+bool Card::operator==(const Card &rhs)
 {
     return (m_value == rhs.m_value);
 }
@@ -89,7 +88,7 @@ bool Card::operator== (const Card& rhs)
 //
 // Card::operator<
 //
-bool Card::operator< (const Card& rhs)
+bool Card::operator<(const Card &rhs)
 {
     return (m_value < rhs.m_value);
 }
@@ -97,7 +96,7 @@ bool Card::operator< (const Card& rhs)
 //
 // Card::operator<=
 //
-bool Card::operator<= (const Card& rhs)
+bool Card::operator<=(const Card &rhs)
 {
     return (m_value <= rhs.m_value);
 }
@@ -105,15 +104,15 @@ bool Card::operator<= (const Card& rhs)
 //
 // Card::operator>
 //
-bool Card::operator> (const Card& rhs)
+bool Card::operator>(const Card &rhs)
 {
     return (m_value > rhs.m_value);
 }
-	
+
 //
 // Card::operator>=
 //
-bool Card::operator>= (const Card& rhs)
+bool Card::operator>=(const Card &rhs)
 {
     return (m_value >= rhs.m_value);
 }
@@ -121,7 +120,7 @@ bool Card::operator>= (const Card& rhs)
 //
 // Card::print
 //
-void  Card::print()
+void Card::print()
 {
     cout << card_array[m_suit][m_value];
 }
