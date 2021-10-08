@@ -81,11 +81,11 @@ void Deck::shuffle(int seed)
 void Deck::sort()
 {
     // Sort the deck by suit.
-    insertion_sort(deck, 0, deck_size, 1);
+    insertion_sort(deck, 0, deck_size, true);
 
     // Sort the deck by value.
     for (int i = 0; i < 4; i++)
     {
-        insertion_sort(deck, i * 13, (i + 1) * 13, 0);
+        insertion_sort(deck, i * 13, (i + 1) * 13);
     }
 }

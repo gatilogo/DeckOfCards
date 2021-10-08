@@ -1,13 +1,13 @@
 #include "helpers.h"
 
-void insertion_sort(Card deck[], int start, int end, int suit)
+void insertion_sort(Card deck[], int start, int end, bool sortBySuit)
 {
     for (int i = start; i < end - 1; i++)
     {
         for (int j = i + 1; j > start; j--)
         {
             // If we are sorting the deck by suits
-            if (suit)
+            if (sortBySuit)
             {
                 // Get the suits of the current and the next cards
                 Card::Suit suit_1 = deck[j - 1].get_suit();
